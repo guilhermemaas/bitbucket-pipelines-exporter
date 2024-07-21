@@ -1,0 +1,13 @@
+version: '3'
+services:
+  bitbucket-pipelines-exporter:
+    restart: always
+    image: gmaas2/bitbucket-pipeline-exporter:1.0.0
+    container_name: bitbucket-pipelines-exporter
+    environment:
+      - BITBUCKET_PIPELINES_EXPORTER_WORKSPACE=$workspace_name
+      - BITBUCKET_PIPELINES_EXPORTER_USERNAME=$username
+      - BITBUCKET_PIPELINES_EXPORTER_APP_PASSWORD=#app_password
+      - BITBUCKET_PIPELINES_EXPORTER_INTERVAL=$seconds
+    ports:
+      - 8000:8000
