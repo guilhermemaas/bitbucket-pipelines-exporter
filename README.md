@@ -8,10 +8,10 @@ Prometheus exporter to visualize status of Bitbucket pipelines
 </p>
 
 ## Introduction
-This Docker image is a Prometheus exporter for Bitbucket Pipelines, designed to provide key metrics from your CI/CD processes.
+This Docker image is a Prometheus exporter for Bitbucket Pipelines, designed to provide key metrics from your Pipeline executions.
 
 ## Why This Project?
-Created because Bitbucket lacks a built-in view to monitor build queues and statuses directly.
+Created because Bitbucket does not have an integrated view/page to view the Runners (self-hosted build agents) build queue.
 
 ## Features
 Metrics exposed include:
@@ -74,15 +74,15 @@ pipeline_last_creator_info{creator_name="Luke Skywalker",repository="endor-stati
 
 # HELP pipeline_last_commit_info Last commit that triggered the pipeline
 # TYPE pipeline_last_commit_info gauge
-pipeline_last_commit_info{commit="https://bitbucket.org/agnesprojects/15bab122a178",repository="coruscant-analytics"} 1.0
-pipeline_last_commit_info{commit="https://bitbucket.org/agnesprojects/0c7a0ba3bb10",repository="dantooine-base"} 1.0
-pipeline_last_commit_info{commit="https://bitbucket.org/agnesprojects/d342fa2cee7f",repository="endor-station"} 1.0
+pipeline_last_commit_info{commit="https://bitbucket.org/swprojects/15bab122a178",repository="coruscant-analytics"} 1.0
+pipeline_last_commit_info{commit="https://bitbucket.org/swprojects/0c7a0ba3bb10",repository="dantooine-base"} 1.0
+pipeline_last_commit_info{commit="https://bitbucket.org/swprojects/d342fa2cee7f",repository="endor-station"} 1.0
 
 # HELP pipeline_last_target_branch_info Last branch selected to start the pipeline
 # TYPE pipeline_last_target_branch_info gauge
 pipeline_last_target_branch_info{repository="coruscant-analytics",target_branch="dev"} 1.0
 pipeline_last_target_branch_info{repository="dantooine-base",target_branch="main"} 1.0
-pipeline_last_target_branch_info{repository="endor-station",target_branch="devops/d20-1"} 1.0
+pipeline_last_target_branch_info{repository="endor-station",target_branch="dev"} 1.0
 
 ```
 
