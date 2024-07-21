@@ -2,7 +2,7 @@ version: '3'
 services:
   bitbucket-pipelines-exporter:
     restart: always
-    image: gmaas2/bitbucket-pipeline-exporter:1.0.0
+    image: gmaas2/bitbucket-pipeline-exporter:latest
     container_name: bitbucket-pipelines-exporter
     environment:
       - BITBUCKET_PIPELINES_EXPORTER_WORKSPACE=$workspace_name
